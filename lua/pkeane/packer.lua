@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
         requires = { {
             'nvim-lua/plenary.nvim',
             'BurntSushi/ripgrep',
-            'nvim-telescope/telescope-fzy-native.nvim'} }
+            'nvim-telescope/telescope-fzy-native.nvim' } }
     }
     --    use({
     --        'rose-pine/neovim',
@@ -54,6 +54,12 @@ return require('packer').startup(function(use)
     }
 
     use "hrsh7th/nvim-cmp" --completion
-    use { 'tzachar/cmp-tabnine', after = "nvim-cmp", run = 'powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp' }
+    if vim.loop.os_uname().sysname == "Windows_NT" then
+        use { 'tzachar/cmp-tabnine', after = "nvim-cmp", run = 'powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp' }
+    else
+        use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
+    end
+
+
     use { 'mfussenegger/nvim-dap' }
 end)
