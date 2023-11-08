@@ -46,12 +46,25 @@ local plugins =
 
 	{ "catppuccin/nvim", name = "catppuccin"},
 
+    { "hrsh7th/nvim-cmp" }, --completion
+    { "hrsh7th/cmp-nvim-lsp" },
 
-	"hrsh7th/nvim-cmp", --completion
+    { "hrsh7th/cmp-nvim-lua" },
+    { "hrsh7th/cmp-nvim-lsp-signature-help" },
+    { "hrsh7th/cmp-vsnip" },                             
+    { "hrsh7th/cmp-path" },                              
+    { "hrsh7th/cmp-buffer" },                            
+    { "hrsh7th/vim-vsnip" }, 
+
 	{ 'tzachar/cmp-tabnine', build = './install.sh', dependencies = 'hrsh7th/nvim-cmp' },
 
 
 	{ 'mfussenegger/nvim-dap' },
+    { 'simrat39/rust-tools.nvim' },
+
+    { 'onsails/lspkind.nvim' },
+    { 'puremourning/vimspector' },
+--    { 'neoclide/coc.nvim', branch = 'release'},
 }
 
 require("lazy").setup(plugins, opts)
