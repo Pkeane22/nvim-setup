@@ -11,12 +11,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = 
+local plugins =
 {
 
 	{'nvim-telescope/telescope.nvim', tag = '0.1.2',
 	-- or                            , branch = '0.1.x',
-	dependencies = { 
+	dependencies = {
 		'nvim-lua/plenary.nvim',
 		'BurntSushi/ripgrep',
 		'nvim-telescope/telescope-fzy-native.nvim'  }
@@ -51,20 +51,24 @@ local plugins =
 
     { "hrsh7th/cmp-nvim-lua" },
     { "hrsh7th/cmp-nvim-lsp-signature-help" },
-    { "hrsh7th/cmp-vsnip" },                             
-    { "hrsh7th/cmp-path" },                              
-    { "hrsh7th/cmp-buffer" },                            
-    { "hrsh7th/vim-vsnip" }, 
+    { "hrsh7th/cmp-vsnip" },
+    { "hrsh7th/cmp-path" },
+    { "hrsh7th/cmp-buffer" },
+    { "hrsh7th/vim-vsnip" },
 
 	{ 'tzachar/cmp-tabnine', build = './install.sh', dependencies = 'hrsh7th/nvim-cmp' },
 
 
-	{ 'mfussenegger/nvim-dap' },
+	{ 'mfussenegger/nvim-dap', dependencies = {"rcarriga/nvim-dap-ui","williamboman/mason-lspconfig.nvim"} },
+	{ 'rcarriga/nvim-dap-ui' },
     { 'simrat39/rust-tools.nvim' },
 
     { 'onsails/lspkind.nvim' },
     { 'puremourning/vimspector' },
---    { 'neoclide/coc.nvim', branch = 'release'},
+    { 'altermo/ultimate-autopair.nvim', event={'InsertEnter','CmdlineEnter'}, branch='v0.6',},
+
+    { 'windwp/nvim-ts-autotag' },
+    { 'nvim-lualine/lualine.nvim' },
 }
 
 require("lazy").setup(plugins, opts)

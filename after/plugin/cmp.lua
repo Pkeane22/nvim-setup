@@ -19,7 +19,6 @@ require('cmp').setup({
         { name = 'buffer' },
         { name = 'nvim_lsp_signature_help' },
         { name = 'nvim_lua' },
-        { name = 'vsnip' },
     },
     formatting = {
         format = function(entry, vim_item)
