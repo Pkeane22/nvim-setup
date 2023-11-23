@@ -84,7 +84,7 @@ local config = {
     },
     sections = {
         lualine_a = { 'mode' },
-        lualine_b = { 'branch' },
+        lualine_b = { { 'branch', icon = '' } },
         lualine_c = { filename, 'diagnostics' },
         lualine_x = { diff, lsp_server },
         lualine_y = { 'filetype' },
