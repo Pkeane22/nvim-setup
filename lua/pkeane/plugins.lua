@@ -69,6 +69,7 @@ local plugins =
 
     { 'windwp/nvim-ts-autotag' },
     { 'nvim-lualine/lualine.nvim' },
+    { 'numToStr/Comment.nvim' }
 }
 
 require("lazy").setup(plugins, opts)
