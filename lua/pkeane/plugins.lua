@@ -64,12 +64,37 @@ local plugins =
     { 'simrat39/rust-tools.nvim' },
 
     { 'onsails/lspkind.nvim' },
-    { 'puremourning/vimspector' },
+    { 'windwp/nvim-autopairs', event = "InsertEnter" },
     { 'altermo/ultimate-autopair.nvim', event={'InsertEnter','CmdlineEnter'}, branch='v0.6',},
 
     { 'windwp/nvim-ts-autotag' },
     { 'nvim-lualine/lualine.nvim' },
     { 'numToStr/Comment.nvim' },
+
+    { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+      'MunifTanjim/nui.nvim', -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    }},
+
+    { 'nvim-java/nvim-java',
+        dependencies = {
+        'nvim-java/lua-async-await',
+        'nvim-java/nvim-java-core',
+        'nvim-java/nvim-java-test',
+        'nvim-java/nvim-java-dap',
+        'MunifTanjim/nui.nvim',
+        'neovim/nvim-lspconfig',
+        'mfussenegger/nvim-dap', {
+                'williamboman/mason.nvim',
+                opts = {
+                    registries = {
+                      'github:nvim-java/mason-registry',
+                      'github:mason-org/mason-registry',
+                    },
+                }
+            },
+        },
+    },
 }
 
 require("lazy").setup(plugins, opts)
