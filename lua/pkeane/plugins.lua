@@ -56,7 +56,7 @@ local plugins =
     { "hrsh7th/cmp-buffer" },
     { "hrsh7th/vim-vsnip" },
 
-	{ 'tzachar/cmp-tabnine', build = './install.sh', dependencies = 'hrsh7th/nvim-cmp' },
+	-- { 'tzachar/cmp-tabnine', build = './install.sh', dependencies = 'hrsh7th/nvim-cmp' },
 
 
 	{ 'mfussenegger/nvim-dap', dependencies = {"rcarriga/nvim-dap-ui","williamboman/mason-lspconfig.nvim"} },

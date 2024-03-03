@@ -4,7 +4,7 @@ local source_mapping = {
     buffer = "[Buffer]",
     nvim_lsp = "[LSP]",
     nvim_lua = "[Lua]",
-    cmp_tabnine = "[TN]",
+    -- cmp_tabnine = "[TN]",
     path = "[Path]",
 }
 
@@ -13,7 +13,7 @@ require('cmp').setup({
     sources = {
         { name = 'nvim_lsp' },
 --        { name = 'nvim_lsp:rust_analyzer' }, 
-        { name = 'cmp_tabnine' },
+        -- { name = 'cmp_tabnine' },
         { name = 'vsnip' },
         { name = 'path' },
         { name = 'buffer' },
