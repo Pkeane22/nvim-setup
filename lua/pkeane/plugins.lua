@@ -19,7 +19,9 @@ local plugins =
 	dependencies = {
 		'nvim-lua/plenary.nvim',
 		'BurntSushi/ripgrep',
-		'nvim-telescope/telescope-fzy-native.nvim'  }
+		'nvim-telescope/telescope-fzy-native.nvim',
+        'benfowler/telescope-luasnip.nvim',
+     }
 	},
 
 	{'nvim-treesitter/nvim-treesitter',  build = ':TSUpdate' },
@@ -30,7 +32,7 @@ local plugins =
 
 	{
 		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
+		branch = 'v3.x',
 		dependencies = {
 			-- LSP Support
 			{ 'neovim/nvim-lspconfig' },             -- Required
@@ -40,7 +42,9 @@ local plugins =
 			-- Autocompletion
 			{ 'hrsh7th/nvim-cmp' },     -- Required
 			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
-			{ 'L3MON4D3/LuaSnip' },     -- Required
+			{ 'L3MON4D3/LuaSnip',       -- Required
+                build = 'make install_jsregexp'
+            },
 		}
 	},
 
@@ -51,13 +55,18 @@ local plugins =
 
     { "hrsh7th/cmp-nvim-lua" },
     { "hrsh7th/cmp-nvim-lsp-signature-help" },
-    { "hrsh7th/cmp-vsnip" },
     { "hrsh7th/cmp-path" },
     { "hrsh7th/cmp-buffer" },
-    { "hrsh7th/vim-vsnip" },
+
+    { 'saadparwaiz1/cmp_luasnip' },
+    { "rafamadriz/friendly-snippets" },
+    { 'SirVer/ultisnips' },
 
 	-- { 'tzachar/cmp-tabnine', build = './install.sh', dependencies = 'hrsh7th/nvim-cmp' },
 
+    { 'stevearc/conform.nvim' },
+    { 'mfussenegger/nvim-lint' },
+    { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
 
 	{ 'mfussenegger/nvim-dap', dependencies = {"rcarriga/nvim-dap-ui","williamboman/mason-lspconfig.nvim"} },
 	{ 'rcarriga/nvim-dap-ui' },
@@ -95,6 +104,21 @@ local plugins =
             },
         },
     },
+    {
+      'olrtg/nvim-emmet',
+      config = function()
+        vim.keymap.set({ "n", "v" }, '<leader>xe', require('nvim-emmet').wrap_with_abbreviation)
+      end,
+    },
+    {
+        'barrett-ruth/live-server.nvim',
+        build = 'npm add -g live-server',
+        cmd = { 'LiveServerStart', 'LiveServerStop' },
+        config = true
+    },
+    { 'lervag/vimtex' },
+    { 'KeitaNakamura/tex-conceal.vim' },
+    { 'barreiroleo/ltex-extra.nvim' },
 }
 
 require("lazy").setup(plugins, opts)

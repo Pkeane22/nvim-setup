@@ -1,32 +1,6 @@
-local lsp = require('lsp-zero')
+local lsp_zero = require('lsp-zero')
 
-lsp.preset('recommended')
-
-lsp.ensure_installed({
-	'tsserver',
-	'eslint',
---	'sumneko_lua',
-	'rust_analyzer',
-})
-
-local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
-local cmp_mappings = lsp.defaults.cmp_mappings({
-	['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-	['<Tab>'] = cmp.mapping.confirm({ select = true }),
-	['<C-Space>'] = cmp.mapping.complete(),
-})
-
-lsp.set_preferences({
-	sign_icons = {}
-})
-
-lsp.setup_nvim_cmp({
-	mapping = cmp_mappings
-})
-
-lsp.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(client, bufnr)
 	local opts = {buffer = bufnr, remap = false}
 
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -42,4 +16,53 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.setup()
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    ensure_installed = {
+        'tsserver',
+        'eslint',
+        'lua_ls',
+        'rust_analyzer',
+    },
+
+    handlers = {
+        lsp_zero.default_setup,
+        lua_ls = function ()
+            local lua_opts = lsp_zero.nvim_lua_ls()
+            require('lspconfig').lua_ls.setup(lua_opts)
+        end,
+        ltex = function ()
+            require('lspconfig').ltex.setup({
+                on_attach = function(client, bufnr)
+                    require('ltex_extra').setup({
+                        path = vim.fn.stdpath("config") .. "/spell/",
+                    })
+                end,
+                settings = {
+                    ltex = {
+                        enabled = { 'bibtex', 'latex', 'markdown' }
+                    }
+                },
+            })
+        end,
+    },
+})
+require("mason-tool-installer").setup({
+    ensure_installed = {
+        "black",
+        "pylint",
+    },
+})
+
+lsp_zero.set_preferences({
+	sign_icons = {}
+})
+
+lsp_zero.format_mapping('<leader>f', {
+    servers = {
+        ['latexindent'] = {'tex', 'latex'},
+        ['black'] = {'py'},
+    },
+})
+
+lsp_zero.setup()

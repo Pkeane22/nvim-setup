@@ -1,24 +1,40 @@
+local lsp_zero = require('lsp-zero')
+-- Since catppuccin requires cmp, and catppuccin is called before lsp_zero
+lsp_zero.extend_lspconfig()
+
 local lspkind = require('lspkind')
+local luasnip = require("luasnip")
+
+-- local cmp_ultisnips_mappings = require('cmp_nvim_ultisnips.mappings')
+local has_words_before = function()
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+end
 
 local source_mapping = {
     buffer = "[Buffer]",
     nvim_lsp = "[LSP]",
     nvim_lua = "[Lua]",
+    luasnip = "[Snip]",
     -- cmp_tabnine = "[TN]",
     path = "[Path]",
 }
 
 local compare = require('cmp.config.compare')
-require('cmp').setup({
+local cmp = require('cmp')
+local cmp_select = {behavior = cmp.SelectBehavior.Select}
+cmp.setup({
     sources = {
         { name = 'nvim_lsp' },
---        { name = 'nvim_lsp:rust_analyzer' }, 
-        -- { name = 'cmp_tabnine' },
-        { name = 'vsnip' },
+        { name = 'nvim_lsp:rust_analyzer' },
+        { name = 'cmp_tabnine' },
+        -- { name = 'vsnip' },
         { name = 'path' },
         { name = 'buffer' },
         { name = 'nvim_lsp_signature_help' },
         { name = 'nvim_lua' },
+        { name = 'luasnip' },
+        -- { name = 'ultisnip' },
     },
     formatting = {
         format = function(entry, vim_item)
@@ -56,7 +72,52 @@ require('cmp').setup({
             compare.order,
         },
     },
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end,
+    },
+    mapping = cmp.mapping.preset.insert({
+        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<\\>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
+        ['<S-\\>'] = function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
+        end,
+    }),
 })
+
+-- local types = require 'luasnip.util.types'
+-- require('luasnip').setup {
+--     history = true,
+--     delete_check_events = 'TextChanged',
+--     -- Display a cursor-like placeholder in unvisited nodes
+--     -- of the snippet.
+--     ext_opts = {
+--         [types.insertNode] = {
+--             unvisited = {
+--                 virt_text = { { '|', 'Conceal' } },
+--                 virt_text_pos = 'inline',
+--             },
+--         },
+--     },
+-- }
 
 -- require('cmp_tabnine').setup({
 --     max_lines = 1000,
@@ -71,7 +132,6 @@ require('cmp').setup({
 --     },
 --     show_prediction_strength = false
 -- })
-
 
 require("rust-tools").setup({
 	server = {

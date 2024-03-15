@@ -1,0 +1,6 @@
+{"rule":"ALL_OF_THE","sentence":"^\\QYou may not assume that all of the integers in the array are non-negative, because then the problem would be boring.\\E$"}
+{"rule":"EN_COMPOUNDS","sentence":"^\\QShow your algorithm (either a Java method or pseudo-code) and a short explanation of the runtime.\\E$"}
+{"rule":"EN_A_VS_AN","sentence":"^\\QThis, however, is your first \"algorithm design\" homework problem of the quarter: You have a sorted array a of increasing integers.\\E$"}
+{"rule":"COMMA_COMPOUND_SENTENCE","sentence":"^\\QSometimes we give you an algorithm to solve a problem and you figure out how to make it happen in code.\\E$"}
+{"rule":"UNIT_SPACE","sentence":"^\\QUse the formal definition of big-Oh (introduced in day 2) to show that 2N2 + 3N – 4 is O(N2).\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qlanguage=java\\E$"}

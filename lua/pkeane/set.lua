@@ -33,4 +33,5 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+vim.opt.spelllang = 'en_us'
 vim.g.mapleader = " "
