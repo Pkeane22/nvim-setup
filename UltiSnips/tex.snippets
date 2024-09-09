@@ -41,7 +41,7 @@ snippet hwtemplate "Homework template" b
 \end{document}
 endsnippet
 
-snippet notestemplate "Notes template" b
+snippet notestemp "Notes template" b
 \documentclass[12pt]{amsart}
 \usepackage{notes}
 
@@ -98,7 +98,7 @@ snippet enum "Enumerate" bA
 \end{enumerate}
 endsnippet
 
-snippet item "Itemize" bA
+snippet item "Itemize" b
 \begin{itemize}
 	\item $0
 \end{itemize}
@@ -139,7 +139,7 @@ endsnippet
 snippet dm "Math" wA
 \[
 ${1:${VISUAL}}
-\] $0
+.\] $0
 endsnippet
 
 snippet ali "Align" bA
@@ -309,6 +309,10 @@ snippet part "d/dx" w
 \frac{\partial ${1:V}}{\partial ${2:x}} $0
 endsnippet
 
+snippet ddx "d/dx" w
+\frac{d${1:f}}{d${2:x}} $0
+endsnippet
+
 context "math()"
 snippet sq "\sqrt{}" iA
 \sqrt{${1:${VISUAL}}} $0
@@ -329,10 +333,10 @@ snippet td "to the ... power" iA
 ^{$1}$0
 endsnippet
 
-context "math()"
-snippet rd "to the ... power" iA
-^{($1)}$0
-endsnippet
+# context "math()"
+# snippet rd "to the ... power" iA
+# ^{($1)}$0
+# endsnippet
 
 snippet __ "subscript" iA
 _{$1}$0
@@ -535,12 +539,12 @@ endsnippet
 
 
 context "math()"
-snippet cc "subset" Ai
-\subset 
+snippet cc "subseteq" Ai
+\subseteq 
 endsnippet
 
 snippet notin "not in " iA
-\not\in 
+\notin 
 endsnippet
 
 context "math()"
@@ -574,6 +578,10 @@ endsnippet
 
 snippet RR "real" iA
 \R
+endsnippet
+
+snippet Rn "real to the n" iA
+\R^${1:2}
 endsnippet
 
 snippet QQ "Q" iA
@@ -666,10 +674,6 @@ snippet msc "mathscr" i
 \mathscr{$1}$0
 endsnippet
 
-snippet \C "Combinations" i
-\C{$1}{$2}$0
-endsnippet
-
 context "math()"
 snippet vv "Vector" iA
 \vec{${1:v}}$0
@@ -678,5 +682,13 @@ endsnippet
 context "nmath()"
 snippet "(?<= )(\d+|[b-zB-Z])([,.]? )" "Singleton Math" wrA
 $`!p snip.rv=match.group(1)`$`!p snip.rv=match.group(2)`
+endsnippet
+
+snippet BB "B" iA
+\mathcal{B}
+endsnippet
+
+snippet EE "E" iA
+\mathcal{E}
 endsnippet
 # vim:ft=snippets

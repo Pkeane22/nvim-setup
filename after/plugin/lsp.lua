@@ -7,7 +7,7 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
 	vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
 	vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-	vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+	vim.keymap.set("n", "d[", function() vim.diagnostic.goto_next() end, opts)
 	vim.keymap.set("n", "d]", function() vim.diagnostic.goto_prev() end, opts)
     vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n", "<leader>a", function() vim.lsp.buf.code_action() end, opts)
@@ -19,7 +19,7 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
-        'tsserver',
+        -- 'tsserver',
         'eslint',
         'lua_ls',
         'rust_analyzer',
@@ -56,13 +56,6 @@ require("mason-tool-installer").setup({
 
 lsp_zero.set_preferences({
 	sign_icons = {}
-})
-
-lsp_zero.format_mapping('<leader>f', {
-    servers = {
-        ['latexindent'] = {'tex', 'latex'},
-        ['black'] = {'py'},
-    },
 })
 
 lsp_zero.setup()

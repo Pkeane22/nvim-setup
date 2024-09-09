@@ -3,11 +3,10 @@ require("neo-tree").setup({
     enable_git_status = true,
 
     window = {
-        position = "float",
+        position = "current",
         mappings = {
             ['C'] = 'close_all_subnodes',
             ['Z'] = 'expand_all_nodes',
-
         },
     },
 

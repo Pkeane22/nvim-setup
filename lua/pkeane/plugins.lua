@@ -17,18 +17,18 @@ local plugins =
 	{'nvim-telescope/telescope.nvim', tag = '0.1.2',
 	-- or                            , branch = '0.1.x',
 	dependencies = {
-		'nvim-lua/plenary.nvim',
-		'BurntSushi/ripgrep',
-		'nvim-telescope/telescope-fzy-native.nvim',
-        'benfowler/telescope-luasnip.nvim',
+		{ 'nvim-lua/plenary.nvim' },
+		{ 'BurntSushi/ripgrep' },
+		{ 'nvim-telescope/telescope-fzy-native.nvim' },
+        { 'benfowler/telescope-luasnip.nvim' },
      }
 	},
 
 	{'nvim-treesitter/nvim-treesitter',  build = ':TSUpdate' },
-	'nvim-treesitter/playground',
-	'ThePrimeagen/harpoon',
-	'mbbill/undotree',
-	'tpope/vim-fugitive',
+	{ 'nvim-treesitter/playground' },
+    { 'ThePrimeagen/harpoon' },
+	{ 'mbbill/undotree' },
+	{ 'tpope/vim-fugitive' },
 
 	{
 		'VonHeikemen/lsp-zero.nvim',
@@ -50,8 +50,8 @@ local plugins =
 
 	{ "catppuccin/nvim", name = "catppuccin"},
 
-    { "hrsh7th/nvim-cmp" }, --completion
-    { "hrsh7th/cmp-nvim-lsp" },
+    -- { "hrsh7th/nvim-cmp" }, --completion
+    -- { "hrsh7th/cmp-nvim-lsp" },
 
     { "hrsh7th/cmp-nvim-lua" },
     { "hrsh7th/cmp-nvim-lsp-signature-help" },
@@ -69,7 +69,7 @@ local plugins =
     { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
 
 	{ 'mfussenegger/nvim-dap', dependencies = {"rcarriga/nvim-dap-ui","williamboman/mason-lspconfig.nvim"} },
-	{ 'rcarriga/nvim-dap-ui' },
+	{ 'rcarriga/nvim-dap-ui', dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
     { 'simrat39/rust-tools.nvim' },
 
     { 'onsails/lspkind.nvim' },
@@ -80,7 +80,8 @@ local plugins =
     { 'nvim-lualine/lualine.nvim' },
     { 'numToStr/Comment.nvim' },
 
-    { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = { 'nvim-lua/plenary.nvim',
+    { 'nvim-neo-tree/neo-tree.nvim', branch = 'v3.x', dependencies = {
+      'nvim-lua/plenary.nvim',
       'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
       'MunifTanjim/nui.nvim', -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     }},
@@ -104,12 +105,12 @@ local plugins =
             },
         },
     },
-    {
-      'olrtg/nvim-emmet',
-      config = function()
-        vim.keymap.set({ "n", "v" }, '<leader>xe', require('nvim-emmet').wrap_with_abbreviation)
-      end,
-    },
+    -- {
+    --   'olrtg/nvim-emmet',
+    --   config = function()
+    --     vim.keymap.set({ "n", "v" }, '<leader>xe', require('nvim-emmet').wrap_with_abbreviation)
+    --   end,
+    -- },
     {
         'barrett-ruth/live-server.nvim',
         build = 'npm add -g live-server',

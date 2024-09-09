@@ -13,3 +13,15 @@ TreeMap
 HashMap
 javadoc
 subinterface
+congruences
+mandnare
+coprime
+hw
+codomain
+derangements
+iff
+nonresidue
+endomorphism
+nonnegative
+eigenspaces
+Mangoldt

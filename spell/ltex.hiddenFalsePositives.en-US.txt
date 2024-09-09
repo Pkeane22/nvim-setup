@@ -4,3 +4,52 @@
 {"rule":"COMMA_COMPOUND_SENTENCE","sentence":"^\\QSometimes we give you an algorithm to solve a problem and you figure out how to make it happen in code.\\E$"}
 {"rule":"UNIT_SPACE","sentence":"^\\QUse the formal definition of big-Oh (introduced in day 2) to show that 2N2 + 3N – 4 is O(N2).\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qlanguage=java\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QFor your small example, you could pick a small array of \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q ints, starting with a few negative numbers and increasing from there.\\E$"}
+{"rule":"OBJECTIVE_CASE","sentence":"^\\QAbove them, write the indices \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q so you can see how a[i] compares with i.\\E$"}
+{"rule":"COMMA_COMPOUND_SENTENCE","sentence":"^\\QAbove them, write the indices \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q so you can see how a[i] compares with i.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qa[j-1] < a[j] for all j with 0 < \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q < a.length.\\E$"}
+{"rule":"EN_A_VS_AN","sentence":"^\\QYou have a sorted array a of increasing integers.\\E$"}
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\Q[5] Prove that if pis prime then \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qmod \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q for \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\Q[1] List all integers in the range \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q that satisfy \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qmod \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\Q[2] Write a single congruence that is equivalent to the pair of congruences \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qmod \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qmod \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\Q[1] List all integers in the range \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q that satisfy \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qmod \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\Q[2] Write a single congruence that is equivalent to the pair of congruences \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qmod \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qmod \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qex. choose \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q skip \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, choose \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, extra.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q(Optional: If you try this and get stuck, you can watch the Build a Tree From Traversals Video) THOEKXQLYUAFICZ\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QQIUCEHLAZKFYTXO is the in-order traversal of the same tree.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QTHEQUICKLAZYFOX is the pre-order traversal of a tree (one character per node).\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QCoE Essay\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QPatrick Keane CSSE230 CoE Essay\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QIf \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QIf \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QIf \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qstrings of length \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q starting with two 1's\\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qbin.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qstrings of length \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q starting with two 1's\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qbin.\\E$"}
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\Qstrings of length \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q starting with two 1's\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qbin.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qstrings of length \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q ending with three 0's\\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\QBinary strings of length \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qstarting with two 1's \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qending with three 0's \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qstarting with two 1's or ending with three 0's \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"OUTSIDE_OF","sentence":"^\\Q[13A:] Find an example of a linear transformation \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q such that \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q intersect non-trivially (outside of the zero-vector).\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QIf \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q then \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QIf \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q where \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q is prime, then \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q .\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QIf \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q then \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q .\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QIf \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q then \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q .\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QIf \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q where \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q is prime, then \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q .\\E$"}
+{"rule":"APART_A_PART","sentence":"^\\QThen, with the remaining \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q items, we can create a sequence from them where they have two possible values, either apart of the combination or not.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Since there are three pivots in the rref(\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q), the col rank\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"COMMA_COMPOUND_SENTENCE","sentence":"^\\QSince \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q is linear, we know that \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and we also know that \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"COMMA_COMPOUND_SENTENCE","sentence":"^\\QSince \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q is linear, we know that \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and we also know that \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Since \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\Qe.g. Integers Integers modulo \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QInv.\\E$"}
+{"rule":"EN_CONTRACTION_SPELLING","sentence":"^\\QId.\\E$"}
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\Q[Problem 17A:] Let \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be the 4×4 matrix with \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qs on the diagonal and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qs everywhere else.\\E$"}
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\Q[17A:] Let \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be the 4×4 matrix with \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qs on the diagonal and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qs everywhere else.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QFind the number of ways to place \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q nonattacking rooks on each chessboard below.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QShow that if \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q are primes satisfying \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q then the number \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q satisfying \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q is a primitive root modulo \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q if and only if it is a quadratic nonresidue modulo \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"IF_IS","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q The identity function \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q if \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q if \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QFor this, since order doesn't matter, we will use OGFs.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q coef.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qof \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QLet \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be the matrix that diagonalizes \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q., the diagonal matrix that represents \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q with respect to the appropriate basis.\\E$"}
+{"rule":"TRUE_TRUTH","sentence":"^\\QIs the converse true?\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QLet \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be the matrix that diagonalizes \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, i.e., the diagonal matrix that represents \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q with respect to the appropriate basis.\\E$"}

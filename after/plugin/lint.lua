@@ -1,14 +1,15 @@
 local lint = require("lint")
 
 lint.linters_by_ft = {
-    python = { "pylint" },
+--     python = { "pylint" },
+    text = { "proselint" },
 }
-
-lint.linters.pylint.args = {
-    '-f',
-    'json',
-    '--disable=E0401,W0102,C0114,C0115,C0116',
-}
+--
+-- lint.linters.pylint.args = {
+--     '-f',
+--     'json',
+--     '--disable=E0401,W0102,C0114,C0115,C0116',
+-- }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     callback = function()
