@@ -37,7 +37,7 @@ local plugins =
 			-- LSP Support
 			{ 'neovim/nvim-lspconfig' },             -- Required
 			{ 'williamboman/mason.nvim' },           -- Optional
-			{ 'williamboman/mason-lspconfig.nvim', version = "v1.x.x" }, -- Optional
+			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
 			-- Autocompletion
 			{ 'hrsh7th/nvim-cmp' },     -- Required
@@ -62,8 +62,6 @@ local plugins =
     { "rafamadriz/friendly-snippets" },
     { 'SirVer/ultisnips' },
 
-	-- { 'tzachar/cmp-tabnine', build = './install.sh', dependencies = 'hrsh7th/nvim-cmp' },
-
     { 'stevearc/conform.nvim' },
     { 'mfussenegger/nvim-lint' },
     { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
@@ -86,31 +84,7 @@ local plugins =
       'MunifTanjim/nui.nvim', -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     }},
 
-    { 'nvim-java/nvim-java',
-        dependencies = {
-        'nvim-java/lua-async-await',
-        'nvim-java/nvim-java-core',
-        'nvim-java/nvim-java-test',
-        'nvim-java/nvim-java-dap',
-        'MunifTanjim/nui.nvim',
-        'neovim/nvim-lspconfig',
-        'mfussenegger/nvim-dap', {
-                'williamboman/mason.nvim',
-                opts = {
-                    registries = {
-                      'github:nvim-java/mason-registry',
-                      'github:mason-org/mason-registry',
-                    },
-                }
-            },
-        },
-    },
-    -- {
-    --   'olrtg/nvim-emmet',
-    --   config = function()
-    --     vim.keymap.set({ "n", "v" }, '<leader>xe', require('nvim-emmet').wrap_with_abbreviation)
-    --   end,
-    -- },
+    { 'nvim-java/nvim-java', },
     {
         'barrett-ruth/live-server.nvim',
         build = 'npm add -g live-server',

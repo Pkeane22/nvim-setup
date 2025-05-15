@@ -18,6 +18,8 @@ end)
 
 require('mason').setup({
 })
+
+local lspconfig = require('lspconfig')
 require('mason-lspconfig').setup({
     ensure_installed = {
         'ts_ls',
@@ -30,10 +32,10 @@ require('mason-lspconfig').setup({
         lsp_zero.default_setup,
         lua_ls = function ()
             local lua_opts = lsp_zero.nvim_lua_ls()
-            require('lspconfig').lua_ls.setup(lua_opts)
+            lspconfig.lua_ls.setup(lua_opts)
         end,
         ltex = function ()
-            require('lspconfig').ltex.setup({
+            lspconfig.ltex.setup({
                 on_attach = function(client, bufnr)
                     require('ltex_extra').setup({
                         path = vim.fn.stdpath("config") .. "/spell/",
@@ -69,12 +71,12 @@ require('mason-lspconfig').setup({
         -- end,
     },
 })
--- require("mason-tool-installer").setup({
---     ensure_installed = {
---         "black",
---         "pylint",
---     },
--- })
+require("mason-tool-installer").setup({
+    ensure_installed = {
+        "black",
+        "pylint",
+    },
+})
 
 lsp_zero.set_preferences({
 	sign_icons = {}
