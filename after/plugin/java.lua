@@ -1,2 +1,2 @@
-require('java').setup()
-require('lspconfig').jdtls.setup({})
+-- require('java').setup()
+-- require('lspconfig').jdtls.setup({})

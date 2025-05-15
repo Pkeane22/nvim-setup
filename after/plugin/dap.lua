@@ -22,3 +22,11 @@ vim.keymap.set("n", "<leader>dx", function ()
 end)
 vim.keymap.set("n", "<leader>do", ":DapStepOver<CR>")
 vim.keymap.set("n", "<leader>di", ":DapStepInto<CR>")
+
+local pydap = require("dap-python")
+pydap.setup("python3")
+pydap.test_runner = "pytest"
+
+vim.keymap.set("n", "<leader>dn", ":lua require('dap-python').test_method()<CR>")
+vim.keymap.set("n", "<leader>df", ":lua require('dap-python').test_class()<CR>")
+vim.keymap.set("v", "<leader>ds", "<ESC>:lua require('dap-python').debug_selection()<CR>")

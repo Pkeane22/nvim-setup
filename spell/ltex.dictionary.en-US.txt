@@ -25,3 +25,17 @@ endomorphism
 nonnegative
 eigenspaces
 Mangoldt
+Archimedian
+Iff
+surjective
+cartesian
+Petrikian
+Archimedean
+Archimedean
+supremum
+infimum
+Balzanno-Weierstrass
+clopen
+subcover
+Coverig
+Lesbegue

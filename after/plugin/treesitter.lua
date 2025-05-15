@@ -1,6 +1,6 @@
 require('nvim-treesitter.configs').setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "rust", "javascript", "python", "c", "lua", "vim", "vimdoc", "query", "markdown" },
+  ensure_installed = { "rust", "javascript", "python", "c", "lua", "vim", "query", "markdown", "latex" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -11,7 +11,10 @@ require('nvim-treesitter.configs').setup {
 
   highlight = {
     enable = true,
-    disable = { "latex" },
+    disable = { "latex", function ()
+        print(vim.fn.expand("%"))
+        return "vimtex" == vim.fn.expand("%")
+    end },
 
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages

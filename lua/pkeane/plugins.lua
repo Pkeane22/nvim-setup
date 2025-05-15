@@ -37,7 +37,7 @@ local plugins =
 			-- LSP Support
 			{ 'neovim/nvim-lspconfig' },             -- Required
 			{ 'williamboman/mason.nvim' },           -- Optional
-			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
+			{ 'williamboman/mason-lspconfig.nvim', version = "v1.x.x" }, -- Optional
 
 			-- Autocompletion
 			{ 'hrsh7th/nvim-cmp' },     -- Required
@@ -120,6 +120,9 @@ local plugins =
     { 'lervag/vimtex' },
     { 'KeitaNakamura/tex-conceal.vim' },
     { 'barreiroleo/ltex-extra.nvim' },
+    { 'mfussenegger/nvim-dap-python' },
+
+    { "3rd/image.nvim", opts = {}, build = false, },
 }
 
 require("lazy").setup(plugins, opts)

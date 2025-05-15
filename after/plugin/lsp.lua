@@ -16,10 +16,11 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-require('mason').setup({})
+require('mason').setup({
+})
 require('mason-lspconfig').setup({
     ensure_installed = {
-        -- 'tsserver',
+        'ts_ls',
         'eslint',
         'lua_ls',
         'rust_analyzer',
@@ -45,14 +46,35 @@ require('mason-lspconfig').setup({
                 },
             })
         end,
+        verible = function ()
+            require('lspconfig').verible.setup({
+                cmd = { "verible-verilog-ls", "--rules", "-no-tabs,-no-trailing-spaces", },
+            })
+        end,
+        -- sql = function ()
+        --     require('lspconfig').sql.setup({
+        --         on_attach = function(client, bufnr)
+        --             require('sqls').on_attach(client, bufnr) -- require sqls.nvim
+        --           end,
+        --           settings = {
+        --             sqls = {
+        --               connections = {
+        --                 {
+        --                   driver = 'mssql',
+        --                 },
+        --               },
+        --             },
+        --           },
+        --     })
+        -- end,
     },
 })
-require("mason-tool-installer").setup({
-    ensure_installed = {
-        "black",
-        "pylint",
-    },
-})
+-- require("mason-tool-installer").setup({
+--     ensure_installed = {
+--         "black",
+--         "pylint",
+--     },
+-- })
 
 lsp_zero.set_preferences({
 	sign_icons = {}

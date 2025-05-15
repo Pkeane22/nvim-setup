@@ -9,6 +9,8 @@ conform.setup({
         json = { "prettier" },
         html = { "prettier" },
         css = { "prettier" },
+        assembly = { "asmfmt" },
+        verilog = { "verible" },
     },
     formatters = {
         prettier = {
@@ -21,6 +23,12 @@ conform.setup({
             inherit = true,
             prepend_args = {
                 "--line-length", "79",
+            },
+        },
+        verible = {
+            inherit = true,
+            perpend_args = {
+                "--rules", "-no-tabs,-no-trailing-spaces",
             },
         },
     },

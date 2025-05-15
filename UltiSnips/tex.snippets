@@ -229,6 +229,10 @@ snippet != "equals" iA
 \neq 
 endsnippet
 
+snippet eps "epsilon" iA
+\epsilon
+endsnippet
+
 context "math()"
 snippet ceil "ceil" iA
 \left\lceil $1 \right\rceil $0
@@ -293,8 +297,9 @@ snippet taylor "taylor" w
 \sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1 $0
 endsnippet
 
-snippet lim "limit" w
-\lim_{${1:n} \to ${2:\infty}} 
+context "math()"
+snippet lim "limit" wA
+\lim_{${1:n} \to ${2:\infty}} $0
 endsnippet
 
 snippet limsup "limsup" w
@@ -464,6 +469,11 @@ snippet norm "norm" iA
 \|$1\|$0
 endsnippet
 
+context "math()"
+snippet abs "abs" iA
+|$1|$0
+endsnippet
+
 priority 100
 context "math()"
 snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp)' "ln" rwA
@@ -530,7 +540,7 @@ endsnippet
 
 context "math()"
 snippet set "set" wA
-\\{$1\\} $0
+\\{$1\\}$0
 endsnippet
 
 snippet || "mid" iA
@@ -690,5 +700,10 @@ endsnippet
 
 snippet EE "E" iA
 \mathcal{E}
+endsnippet
+
+context "math()"
+snippet seq "seq" wA
+\\{$1\\}_{n=1}^\infty$0
 endsnippet
 # vim:ft=snippets

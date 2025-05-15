@@ -53,3 +53,19 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QLet \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be the matrix that diagonalizes \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q., the diagonal matrix that represents \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q with respect to the appropriate basis.\\E$"}
 {"rule":"TRUE_TRUTH","sentence":"^\\QIs the converse true?\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QLet \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be the matrix that diagonalizes \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, i.e., the diagonal matrix that represents \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q with respect to the appropriate basis.\\E$"}
+{"rule":"THE_SUPERLATIVE","sentence":"^\\QBy well ordering of \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q has a least element, say \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"IF_IS","sentence":"^\\Qex: \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q if \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q bounded if \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, not.\\E$"}
+{"rule":"IF_IS","sentence":"^\\QEx: \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q if \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q bounded if \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, not.\\E$"}
+{"rule":"THE_SUPERLATIVE","sentence":"^\\Q[H.P. 2:] Prove or disprove: the set of negative rational numbers \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q does not have a largest element.\\E$"}
+{"rule":"THE_SUPERLATIVE","sentence":"^\\Q[2] Prove or disprove: the set of negative rational numbers \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q does not have a largest element.\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QFor each combination, there must be \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q factors \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q such that \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q .\\E$"}
+{"rule":"BEEN_PART_AGREEMENT","sentence":"^\\QNeed to show for some \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and for all \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q there exists some \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q such that \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q for any would be limit \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"BEEN_PART_AGREEMENT","sentence":"^\\QNeed to show for some \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and for all \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q there exists some \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q such that \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q for any would be limit \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"ADVERB_OR_HYPHENATED_ADJECTIVE","sentence":"^\\Q[16] Let \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be an arbitrary ordered field.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q2.3 Limit supremum, Limit infinum, and Balzanno-Weierstrass.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q2.3 Limit supremum, Limit infimum, and Balzanno-Weierstrass.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QDefine, if limit exist, \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \"limit supremum\" or \"lim sup\" or \"upper limit\" \"limit infimum\" or \"lim ind\" or \"lower limit\"\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QAutomatic by Thm. 2.3.4.\\E$"}
+{"rule":"MISSING_GENITIVE","sentence":"^\\QCauchy proof continued: So \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q exist.\\E$"}
+{"rule":"IF_IS","sentence":"^\\QThe discrete metric on \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q is \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q defined by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q if \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q if \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qcompat=1.16\\E$"}
